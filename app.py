@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, render_template_string
 from flask_cors import CORS
 from ariadne import QueryType, MutationType, make_executable_schema, graphql_sync, gql
-import webbrowser
 
 app = Flask(__name__)
 CORS(app)  
@@ -116,9 +115,6 @@ def apollo_sandbox():
     </html>
     """)
 
-def open_browser():
-    webbrowser.open_new("http://localhost:5000/")
 
 if __name__ == "__main__":
-    open_browser()
     app.run(debug=True)
