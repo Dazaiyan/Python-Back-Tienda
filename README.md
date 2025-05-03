@@ -119,18 +119,9 @@ query {
   }
 }
 ```
+![image](https://github.com/user-attachments/assets/0cd91d66-2597-4d5f-8fa8-24ed14aabe40)
 
-**Obtener un producto específico:**
 
-```graphql
-query {
-  producto(id: 2) {
-    nombre
-    precio
-    disponible
-  }
-}
-```
 
 ### Ejemplos de mutaciones
 
@@ -146,6 +137,9 @@ mutation {
 }
 ```
 
+![image](https://github.com/user-attachments/assets/ee282028-359f-459f-a4d8-52a58aae054b)
+
+
 **Aumentar stock:**
 
 ```graphql
@@ -157,3 +151,6 @@ mutation {
   }
 }
 ```
+
+![image](https://github.com/user-attachments/assets/54fad004-232a-49de-84cc-73e2a689b57a)
+
