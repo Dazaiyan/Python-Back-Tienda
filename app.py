@@ -72,7 +72,7 @@ def get_productos(*_):
     return productos
 
 @mutation.field("modificarStock")
-def modificar_stock(_, info, id, cantidad):
+def modificar_stock(_, id, cantidad):
     for p in productos:
         if p["id"] == int(id):
             p["stock"] += cantidad

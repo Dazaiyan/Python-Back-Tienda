@@ -9,17 +9,6 @@ query GetProductos {
   }
 }
 
-# 2. Obtener un producto específico
-query GetProducto {
-  producto(id: "1") {
-    id
-    nombre
-    precio
-    stock
-    disponible
-  }
-}
-
 # 3. Aumentar el stock de un producto
 mutation AumentarStock {
   modificarStock(id: "1", cantidad: 5) {
