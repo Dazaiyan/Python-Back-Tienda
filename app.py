@@ -72,16 +72,17 @@ def get_productos(*_):
     return productos
 
 @mutation.field("modificarStock")
-def modificar_stock(_, id, cantidad):
-    for p in productos:
-        if p["id"] == int(id):
-            p["stock"] += cantidad
-            if p["stock"] <= 0:
-                p["stock"] = 0
-                p["disponible"] = False
+def resolve_modificar_stock(_, info, id, cantidad):
+    for producto in productos:
+        if producto["id"] == int(id):
+            producto["stock"] += cantidad
+            if producto["stock"] <= 0:
+                producto["stock"] = 0
+                producto["disponible"] = False
             else:
-                p["disponible"] = True
-            return p
+                producto["disponible"] = True
+                
+            return producto
     return None
 
 schema = make_executable_schema(type_defs, query, mutation)
